@@ -1,0 +1,61 @@
+### Imports
+
+
+### Exports
+
+#Univariate distributions
+export(dEPD, pEPD, qEPD, rEPD)
+export(dupareto, pupareto, qupareto, rupareto)
+export(dfrechet, pfrechet, qfrechet, rfrechet)
+export(dufrechet, pufrechet, qufrechet, rufrechet)
+
+#bivariate copulas
+export(dFGM, pFGM, qFGM, rFGM)
+export(dfrank, pfrank, qfrank, rfrank)
+
+#zvalueRTDE class
+export(zvalueRTDE)
+S3method(summary, zvalueRTDE)
+S3method(print, zvalueRTDE)
+S3method(print, summary.zvalueRTDE)
+
+export(relexcess)
+S3method(relexcess, default)
+S3method(relexcess, zvalueRTDE)
+
+
+#RTDE data+fit
+export(RTDE)
+S3method(summary, RTDE)
+S3method(plot, RTDE)
+S3method(print, RTDE)
+S3method(print, summary.RTDE)
+
+#RTDE prob
+export(prob)
+S3method(prob, default)
+S3method(prob, RTDE)
+S3method(prob, fitRTDE)
+
+
+#fitRTDE
+export(fitRTDE)
+S3method(summary, fitRTDE)
+S3method(plot, fitRTDE)
+S3method(print, fitRTDE)
+S3method(print, summary.fitRTDE)
+
+#dataRTDE
+export(dataRTDE)
+S3method(summary, dataRTDE)
+S3method(plot, dataRTDE)
+S3method(print, dataRTDE)
+S3method(print, summary.dataRTDE)
+
+
+#minimum distance power divergence estimation
+export(MDPD)
+
+export(qqparetoplot)
+
+
