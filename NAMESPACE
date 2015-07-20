@@ -1,4 +1,8 @@
 ### Imports
+importFrom("graphics", legend, lines, par, plot, points)
+importFrom("stats", constrOptim, integrate, optim, optimize, quantile, runif)
+importFrom("utils", head)
+importFrom("parallel", makeCluster, clusterEvalQ, clusterExport, parLapply, stopCluster)
 
 
 ### Exports

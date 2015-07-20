@@ -5,7 +5,7 @@
 \alias{qfrank}
 \alias{rfrank}
 
-\title{The Eyraud Farlie Gumbel Morgenstern Distribution}
+\title{The Frank Distribution}
 \description{
   Density function, distribution function, quantile function, random generation.
 }

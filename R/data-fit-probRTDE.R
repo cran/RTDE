@@ -29,8 +29,6 @@ RTDE <- function(obs=NULL, simu=list(), contamin=list(),
         stop("Too many arguments: either obs or simu must be specified")
     
     obs.type <- ifelse(missing(obs), "simulated", "empirical")
-    if(missing(keepdata))
-        keepdata <- core > 1
 
     #sanity check
     if(obs.type == "simulated")
@@ -41,11 +39,15 @@ RTDE <- function(obs=NULL, simu=list(), contamin=list(),
             stop(txt)
         if(!is.numeric(simu$replicate))
             stop("simu$replicate must be a numeric.")
+        if(missing(keepdata))
+            keepdata <- core == 1 || simu$replicate < 10
     }
     if(obs.type == "empirical")
     {
         if(!is.matrix(obs) || NCOL(obs) != 2)
             stop("obs must be a two-column matrix.")
+        if(missing(keepdata))
+            keepdata <- TRUE
     }
     
     if(length(contamin) > 0)

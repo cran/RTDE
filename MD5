@@ -1,7 +1,7 @@
-e5ebd160924e615521d4801bffbc0021 *DESCRIPTION
-53840358b4c02c5d086a96b42a5798ae *NAMESPACE
+fa52e05bef107983d5054efaeb079038 *DESCRIPTION
+df58872bab786e9a361b09b9c57c26cc *NAMESPACE
 a21f56c362f1f6c65c50a17ce4123e8a *R/MDPD.R
-1fd272d26ce301750a2935ac2e441538 *R/data-fit-probRTDE.R
+0b7c6aa105f3a186adfb6939cc2f2e64 *R/data-fit-probRTDE.R
 dc4ce524a3e2860167b0affc8e459003 *R/dataRTDE.R
 2cb30d5339c1e3185e17876eebc3bb25 *R/fitRTDE.R
 3758f65c9d09c7839db217607b6ecbfe *R/probRTDE.R
@@ -10,11 +10,11 @@ da88e532938d0031e5191b6611f23c30 *R/util-Zvalue.R
 6acea3b44e74a5bf3dca78d733d23ce4 *R/util-copula.R
 3d98e493ed85d5386ef4feb179927882 *R/util-graph.R
 093a9eb6a3ddd1e02b580508d9bc2e31 *R/util-probdistr.R
-bd914555cd6ea7ff2f1ee07fe162fcda *inst/CITATION
-3d51be587f0937f802679038c2db8725 *inst/NEWS
+2862e71513d7560ae1f3f6a5cb2a8176 *inst/CITATION
+d716f16078cfef3b6d44acbc684a9e01 *inst/NEWS
 a95d95d85aecac72ff96870744e7cede *man/EPD.Rd
 f252fb66a43d8ad75377cf23e9f8618f *man/FGM.Rd
-68cea4a02476112bceb475d7b101df30 *man/Frank.Rd
+ec7bd5f46272694ce9d4cce9c9a40d82 *man/Frank.Rd
 b3182bdceca33e9cf02fbcf15378d047 *man/Frechet.Rd
 d64af0a96260d7b9342eeb0feb9b37d8 *man/MDPD.Rd
 ef11cf8d4493b3528a1bcc67fac51be3 *man/RTDE.Rd
@@ -25,7 +25,7 @@ cc199b4cc0a687b578e1314ecbc9ce88 *man/qqpareto.Rd
 37831b54f38b8da4479ce27964f674a7 *man/unitpareto.Rd
 2e035b9e179e7924ad309a361843ad9d *tests/test-EPD.R
 1ecc2b59528ef9836aaa0da21c5c5e80 *tests/test-EUstockmarket.R
-e21e7ed696133d1c5595d89831d8ee3b *tests/test-FGM.R
+afee37879790ca57ff6b4c9bb1625498 *tests/test-FGM.R
 10a3c9e6944dfbe9f03177f3e4f0616c *tests/test-MDPD.R
 abe55d9c693becd25fa0c46c437fc649 *tests/test-RTDE.R
 3cebbdcdaa92959542b1b27ebd0e8707 *tests/test-dataRTDE.R

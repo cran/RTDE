@@ -1,15 +1,12 @@
 citHeader("To cite RTDE in publications use:")
 
 
-citEntry(entry="Manual",
-         title = "Robust Tail Dependence Estimation",
-         author = "Christophe Dutang",
-	 year = 2014,
-         note = "R package version 0.1-0",
+year <- sub("-.*", "", meta$Date)
+note <- sprintf("R package version %s", meta$Version)
 
-         textVersion =
-	 paste(	"C. Dutang",
-		"(2014),",
-	       	"Robust Tail Dependence Estimation")
-)
-
+bibentry(bibtype = "Manual",
+         title = "{RTDE}: Robust Tail Dependence Estimation",
+         author = c(person("Dutang", "Christophe")),
+         year = year,
+         note = note,
+         url = "http://CRAN.R-project.org/package=RTDE")

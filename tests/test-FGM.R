@@ -44,17 +44,35 @@ checkFGMfrechet(x, 2, 1/2)
 #####
 # (4) simulation
 
-n <- 1e5
+n <- 1e6
 
 uv <- rFGM(n, 1/2)
 S <- function(x, y) sum(uv[,1] > x & uv[,2] > y) / NROW(uv)
 
-S(1/2, 1/4)
-pFGM(1/2, 1/4, 1/2, lower.tail=FALSE)
+sapply(1:9/10, function(z)
+ 	c(S(z, 1/4),
+	pFGM(z, 1/4, 1/2, lower.tail=FALSE)))
 
-S(1/2, 1/2)
-pFGM(1/2, 1/2, 1/2, lower.tail=FALSE)
+sapply(1:9/10, function(z)
+ 	c(S(z, 1/2),
+	pFGM(z, 1/2, 1/2, lower.tail=FALSE)))
 
-S(1/2, 3/4)
-pFGM(1/2, 3/4, 1/2, lower.tail=FALSE)
+sapply(1:9/10, function(z)
+ 	c(S(z, 3/4),
+	pFGM(z, 3/4, 1/2, lower.tail=FALSE)))
 
+
+xy <- qufrechet(uv)
+S <- function(x, y) sum(xy[,1] > x & xy[,2] > y) / NROW(xy)
+
+res <- sapply(1:9*10, function(z)
+ 	c(S(z, 10),
+	pFGM(pufrechet(z), pufrechet(10), 1/2, lower.tail=FALSE)))
+
+res <- sapply(1:9*10, function(z)
+ 	c(S(z, 40),
+	pFGM(pufrechet(z), pufrechet(40), 1/2, lower.tail=FALSE)))
+
+
+plot(1:9*10, res[1,], type="l", ylim=range(res))
+lines(1:9*10, res[2,], col="red", lty=2)
