@@ -22,7 +22,7 @@
 fitRTDE <- function(obs, nbpoint, alpha, omega, method="MDPDE", fix.arg=list(rho=-1),
     boundary.method="log", control=list())
 {
-    if(class(obs) == "dataRTDE")
+    if(inherits(obs,"dataRTDE"))
     {
         if(any(is.na(obs$n0)))
             obs <- obs$data
@@ -30,7 +30,7 @@ fitRTDE <- function(obs, nbpoint, alpha, omega, method="MDPDE", fix.arg=list(rho
             obs <- rbind(obs$data, obs$contamin)
     }
     
-    if(!is.matrix(obs) || NCOL(obs) != 2)
+    if(any(!is.matrix(obs) || NCOL(obs) != 2))
         stop("observations should a two-column matrix.")
     method <- match.arg(method, "MDPDE")
     boundary.method <- match.arg(boundary.method, c("log", "simple"))
@@ -45,7 +45,7 @@ fitRTDE <- function(obs, nbpoint, alpha, omega, method="MDPDE", fix.arg=list(rho
     a.length <- length(alpha)
     o.length <- length(omega)
     n <- NROW(obs)
-    n0 <- ifelse(class(obs) == "dataRTDE", obs$n0, NA)
+    n0 <- ifelse(inherits(obs,"dataRTDE"), obs$n0, NA)
     
     feta <- fdelta <- array(0, dim=c(a.length, o.length, m.length))
     Ztilde <- matrix(0, nrow=n, ncol= o.length)

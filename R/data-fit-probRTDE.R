@@ -110,7 +110,7 @@ RTDE <- function(obs=NULL, simu=list(), contamin=list(),
                 #close clusters
                 parallel::stopCluster(cl)
                 
-                if(class(res) == "try-error")
+                if(is(res,"try-error"))
                 {
                     print(res)
                     stop("error in computation")
