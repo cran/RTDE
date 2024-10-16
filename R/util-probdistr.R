@@ -122,7 +122,7 @@ getqEPD <- function(p, eta, delta, rho, upperbound=Inf, tol=1e-9)
         ((1-p)^(-eta) - x * (1 + delta - delta * x^(rho/eta)))^2
     }
     res <- try(optimize(L2, c(1, upperbound), tol=tol), silent=TRUE)
-    if(class(res) == "try-error")
+    if(inherits(res, "try-error"))
         return(NA)
     else
         return(res$minimum)

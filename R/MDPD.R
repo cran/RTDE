@@ -39,7 +39,7 @@ MDPD <- function(theta, densfun, obs, alpha, ..., control=list())
         
     #sanity check
     testf <- try(f(obs))
-    if(class(testf) == "try-error")
+    if(inherits(testf, "try-error"))
         stop("the density function raised an error.")
     
     

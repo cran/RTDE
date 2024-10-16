@@ -26,7 +26,7 @@ prob.default <- function(object, q, ...)
 
 prob.RTDE <- function(object, q, ...)
 {
-    stopifnot(class(object) == "RTDE")
+    stopifnot(inherits(object, "RTDE"))
     
     object$prob <- pRTDE(q, object)
     object$q <- q
@@ -35,7 +35,7 @@ prob.RTDE <- function(object, q, ...)
 
 prob.fitRTDE <- function(object, q, ...)
 {
-    stopifnot(class(object) == "fitRTDE")
+    stopifnot(inherits(object, "fitRTDE"))
     
     stop("not implemented.")
     
@@ -47,9 +47,9 @@ prob.fitRTDE <- function(object, q, ...)
 
 pRTDE <- function(q, object)
 {
-    stopifnot(class(object) %in% c("RTDE", "fitRTDE"))
+  stopifnot(inherits(object, c("RTDE", "fitRTDE")))
     
-    if(class(object) == "RTDE")
+    if(inherits(object, "RTDE"))
     {
         if(length(object$simu) > 0)
             nbreplic <- object$simu$replicate

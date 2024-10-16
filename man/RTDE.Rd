@@ -74,7 +74,7 @@ prob(object, q, \dots)
         (cf. \code{\link{fitRTDE}} and \code{\link{MDPD}}) based
         on an extended Pareto distribution approximation (\code{\link{EPD}}).
     Typical distributions for simulated data and/or contaminations are
-    \itemize{
+    \describe{
     \item{Marginal}{Unit Pareto \code{\link{upareto}}, Frechet \code{\link{Frechet}}.}
     \item{Copula}{Frank \code{\link{Frank}}, FGM \code{\link{FGM}}.}
     }
@@ -83,14 +83,14 @@ prob(object, q, \dots)
 \value{
   \code{RTDE} returns an object of class \code{"RTDE"}
   having the following components:
-    \describe{
+  \describe{
     \item{\code{obs.type}}{see \code{\link{dataRTDE}}.}
     \item{\code{data}}{see \code{\link{dataRTDE}}.}
     \item{\code{fit}}{see \code{\link{fitRTDE}}.}
     \item{\code{simu}}{see \code{\link{dataRTDE}}.}
     \item{\code{contamin}}{see \code{\link{dataRTDE}}.}
     \item{\code{setting}}{a list summarizing the computation.}
-}
+  }
 }
 
 \seealso{

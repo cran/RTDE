@@ -1,6 +1,11 @@
 === RTDE: Robust Tail Dependence Estimation ===
 
 
+Version 0.2-2
+=============
+
+- update to comply with R 4.4.0. 
+
 Version 0.2-1
 =============
 
